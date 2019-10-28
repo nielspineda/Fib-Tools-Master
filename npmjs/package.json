@@ -1,0 +1,27 @@
+{
+  "name": "@dastahel/miniserve",
+  "license": "MIT",
+  "private": false,
+  "version": "1.0.0",
+  "main": "server.js",
+  "description": "Mini-server",
+  "author": {
+    "name": "bbq-beets",
+    "email": "bbq-beets@github.com"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/bbq-beets/satellite-demo.git"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "mocha": "^6.1.4"
+  },
+  "devDependencies": {
+    "mocha-junit-reporter": "^1.12.0",
+    "nyc": "^14.1.1"
+  },
+  "scripts": {
+    "build": "nyc --reporter=cobertura --reporter=html ./node_modules/.bin/mocha tests/**/*.js --reporter mocha-junit-reporter --reporter-options mochaFile=./TEST-RESULTS.xml"
+  }
+}
